@@ -37,7 +37,7 @@ def solve_derivative(function):
 
 # splits terms using regex
 def split_terms(function):
-    terms = re.findall(r'((\+?\-?\d+)?x\^?\d+?|(\+|\-)?.*\([^)]+\)|((\+|\-)?\d+?)x|(\+|\-)?x|(\+|\-)?\d+\^\([^)]+\))', function)
+    terms = re.findall(r'((\+?\-?\d+)?x\^?\d+?|(\d+)?.*\([^)]+\)|((\+|\-)?\d+?)x|(\+|\-)?x|(\+|\-)?\d+\^\([^)]+\))', function)
     # gets the first term from an array of 3
     for i in range(len(terms)):
         terms[i] = terms[i][0]
