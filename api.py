@@ -12,8 +12,9 @@ def home():
 @app.route('/hints', methods=['POST'])
 def hints():
     function = request.form['function']
-    hint = assign_hint(function)
-    return render_template('hints.html', function=function, hint=hint)
+    hint = assign_hint(function)[1]
+    hint1 = assign_hint(function)[0]
+    return render_template('hints.html', function=function, hint1=hint1, hint=hint)
 
 @app.route('/answer', methods=['POST'])
 def answer():
