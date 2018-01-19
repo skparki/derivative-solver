@@ -41,9 +41,11 @@ MathJax.Hub.Config({
     <br><br>
     <div class="container">
       <div class="jumbotron">
+        <form action="/home" method="GET" value='{{function}}'>
         <h2>$$ f(x) = {{ function }}$$</h2> <br>
         <h2>$$ \frac{dy}{dx} = {{ answer }}$$</h2>
         <a class='form-control btn btn-primary' href="/" focus>Another one</a>
+      </form>
       </div>
     </div>
   </body>

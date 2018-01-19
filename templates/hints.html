@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <head>
+    <meta charset="utf-8">
+    <title>Hints</title>
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <body>
+    <br><br>
+    <div class="container">
+      <div class="jumbotron">
+        <form action="/answer" method="POST">
+          <input name="function" type="hidden" value='{{function}}'>
+          <h1 align="center">Hints: try it yourself first</h1><br><br>
+          <h2>$$ f(x) = {{ function }}$$</h2> <br>
+          <h2>$$ \frac{d ({{ function }})}{dx} = {{ hint }}$$</h2>
+          <input type="submit" class='form-control btn btn-primary' value="Get answer">
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

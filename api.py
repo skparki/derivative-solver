@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from derivativesolver import *
+from hint import *
 import requests
 
 app = Flask(__name__)
@@ -7,6 +8,12 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('home.html')
+
+@app.route('/hints', methods=['POST'])
+def hints():
+    function = request.form['function']
+    hint = assign_hint(function)
+    return render_template('hints.html', function=function, hint=hint)
 
 @app.route('/answer', methods=['POST'])
 def answer():

@@ -36,10 +36,11 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Derivative solver</h1>
-      <form action="/answer" method="POST">
-      Enter a function you want to differentiate : <input type="text" name="function" class="form-control" placeholder="4x^3-x^2+4" focus>
-      <input type="submit" class='form-control btn btn-primary'></div>
-    </form>
+      <form action="/hints" method="POST">
+      Enter a function you want to differentiate : <input type="text" name="function" class="form-control" placeholder="4x^3-x^2+4" value='{{function}}' focus>
+      <input type="submit" class='form-control btn btn-primary'>
+      </form>
+    </div>
   </div>
 </body>
 
