@@ -23,10 +23,10 @@ def assign_hint(function):
             hint = "asec^2(ax)"
         elif ("e^" in terms[i]):
             hint1 = "e^(ax)"
-            hint = "ae^(ax)"
+            hint = "ae^{(ax)}"
         elif ("cot" in terms[i]):
             hint1 = "cot(ax)"
-            hint = "-acsc^2(ax)"
+            hint = "-acsc^2{(ax)}"
         elif ("csc" in terms[i]):
             hint1 = "csc(ax)"
             hint = "-acsc(ax)cot(ax)"
@@ -36,8 +36,8 @@ def assign_hint(function):
         # regex finds a number following a '^' for number powers
         elif (re.findall(r'^\d+\^', terms[i])):
             hint1 = "a^(x)"
-            hint = "a^(x)(ln(a))"
+            hint = "a^{(x)}(ln(a))"
         else:
             hint1 = "x^n"
-            hint = "nx^(n-1)"
+            hint = "nx^{(n-1)}"
     return hint1, hint
